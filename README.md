@@ -1,9 +1,11 @@
-Sentiment Analysis for Financial Text
+#sentiment-analysis-finance
 
 Method Proposed: 
+	
 	Mining-based hierarchical classifier using Performance Indicators along with positive and negative dictionaries
 
 Dictionaries structure:
+	
 	Lagging words: divident, cash, earnings, net sale, revenue, etc.
 	Lagging-rev words: cost, expenses, net loss, taxes, operating cost, etc.
 	Leading: capacity, contract, employee, offering, personnel, production, etc.
@@ -12,6 +14,7 @@ Dictionaries structure:
 	Negative: bad, accused, crisis, cutbacks, damage, etc.
 
 Model performance on datasets:
+	
 	DS: 100 (100% agreement) - Length: 2264
 		Accuracy positive: 93%
 		Accuracy neutral: 90%
@@ -30,19 +33,23 @@ Model performance on datasets:
 		Accuracy negative: 75%
 
 Parser module:
+	
 	- parses given text and outputs a list of tokens (leading, positive, lagging:up, etc) along with list of words that represent those tokens
 	  for evaluation purposes
 	- it splits the text into words (using nltk module) and searches in loaded dictionaries proposed indicators
 	- it also groups performance indicators together with directionality words (ex: leading:down)
 
 Trainer Module:
+	
 	- train method in Trainer class trains the model on a given dataset of labeled sentences, it outputs a dictionary simmilar with the one described above which is used as a model
 	- evaluate method evaluates the model on a dataset similar with one used for training, it computes the accuracy (correctly guessed / total sentences)
 
 Api Module:
+	
 	- exposes a function to be used on any text, the module can be executed on a text file and will output a percentage of sentiment for the text inside the file
 
 Config module:
+	
 	- used to set paths
 
 
@@ -64,6 +71,7 @@ Improvements made:
 			- lagging: expenses loss cost operating cost net loss operating expense operating loss costs tax expense taxes 
 
 Future work:
+	
 	Introduction of numbers comparison:
 		Ex: The diluted loss per share narrowed to EUR 0.27 from EUR 0.86
 			Return on investment was 16.6 % compared to 15.8 % in 2004
