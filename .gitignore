@@ -1,0 +1,11 @@
+*.pyc
+*.log
+*.time
+.idea
+*.txt
+*.csv
+*.pprint
+datasets
+models
+dictionaries_backup
+original_dictionaries
