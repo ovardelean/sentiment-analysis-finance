@@ -47,10 +47,9 @@ def compare_jsons(path1, path2):
                 different_keys.add((key, loaded1[key]))
             elif loaded1[key] != loaded2[key]:
                 different_keys.add((key, loaded1[key]))
-        print dic
+        print(dic)
         for dfk in different_keys:
-            print dfk[0],
-        print "="*50
+            print(dfk[0])
 
 if __name__ == "__main__":
     if sys.argv[1] == "tojson":

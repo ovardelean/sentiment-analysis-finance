@@ -2,12 +2,12 @@ import os, sys
 import nltk
 
 import config
-import parser
+from parser import Parser
 
 
 class SentimentAPI(object):
     def __init__(self):
-        self.parser = parser.Parser()
+        self.parser = Parser()
         self.model = self.parser.load_dictionary(config.MODEL)
 
     def sentiment(self, text):
@@ -33,7 +33,7 @@ def main():
     text_file = sys.argv[1]
     fdata = open(text_file, 'rb').read()
     verdict = api.sentiment(fdata)
-    print verdict
+    print(verdict)
 
 if __name__ == "__main__":
     main()

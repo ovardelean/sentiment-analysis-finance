@@ -12,25 +12,25 @@ ds50 = {'positive':[], 'negative':[], 'neutral': []}
 
 for line in f1.split("\n"):
 	if not "@" in line:
-		print line
+		print(line)
 		continue
 	line = line.decode('ascii', 'ignore')
 	ds100[line.split("@")[1].strip()].append(line.split("@")[0].strip())
 for line in f2.split("\n"):
 	if not "@" in line:
-		print line
+		print(line)
 		continue
 	line = line.decode('ascii', 'ignore')
 	ds75[line.split("@")[1].strip()].append(line.split("@")[0].strip())
 for line in f3.split("\n"):
 	if not "@" in line:
-		print line
+		print(line)
 		continue
 	line = line.decode('ascii', 'ignore')
 	ds66[line.split("@")[1].strip()].append(line.split("@")[0].strip())
 for line in f4.split("\n"):
 	if not "@" in line:
-		print line
+		print(line)
 		continue
 	line = line.decode('ascii', 'ignore')
 	ds50[line.split("@")[1].strip()].append(line.split("@")[0].strip())
